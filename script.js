@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    let xml = new XMLHttpRequest();
-    xml.addEventListener("load", setImg);
-    xml.open("GET", "sus.jpg");
-    xml.send();
+    setTimeout(loadImg, 1000);
 }
 
-function setImg() {
-    console.log("Balls");
+function loadImg() {
+    const myImage = new Image();
+    myImage.src = "sus.jpg";
+    document.body.appendChild(myImage);
 }
